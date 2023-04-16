@@ -1,9 +1,11 @@
 ---
 import { Picture } from "@astrojs/image/components";
 import { Icon } from "astro-icon";
-import astronautImage from "~/assets/astronaut.png";
+import chrisImage from "~/assets/chris_profile.jpg";
 import HeroImage from "~/components/hero-image.astro";
 import Starfield from "~/components/starfield.astro";
+import Bubblyfield from "~/components/bubblyfield.astro";
+
 import GitHubCorner from "./github-corner.astro";
 
 const widths = [450, 800];
@@ -11,22 +13,22 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
 ---
 
 <section class="relative h-full bg-black">
-  <Starfield />
-  <GitHubCorner />
+  <Bubblyfield />
+  <!-- <GitHubCorner /> -->
   <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
     <HeroImage />
   </div>
-  <div class="relative grid h-full place-items-center sm:grid-cols-2">
+  <div class="relative grid h-full place-items-center sm:grid-cols-2 gap-10">
     <h2
       class="flex flex-col gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end"
     >
-      <Icon name="logomark" class="h-24 text-white md:h-32" />
+      <!-- <Icon name="logomark" class="h-24 text-white md:h-32" /> -->
       <div
-        class="gradient-text text-center font-extrabold tracking-tighter text-8xl"
+        class="gradient-text text-center font-extrabold tracking-tighter text-9xl"
       >
-        Build fast
-        <br /> websites,
-        <br /> faster.
+        Creator, <br />
+        Developer<br />
+        <span class="text-4xl tracking-normal">- Chris Wu -</span>
       </div>
     </h2>
     <div
@@ -34,8 +36,8 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
       class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
     >
       <Picture
-        class="object-cover w-full h-full"
-        src={astronautImage}
+        class="object-cover w-full h-full rounded-full"
+        src={chrisImage}
         widths={widths}
         sizes={sizes}
         loading="eager"

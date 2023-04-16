@@ -1,0 +1,67 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import { Icon } from "astro-icon";
+import type { FooterLink } from "~/types";
+
+const links: Array<FooterLink> = [
+  {
+    url: "https://drupal.org/u/amourow",
+    description: "Drupal.org",
+    icon: "fa-brands:drupal",
+  },
+  {
+    url: "https://github.com/mhyfritz/astro-landing-page",
+    description: "LinkedIn",
+    icon: "fa-brands:linkedin",
+  },
+  {
+    url: "https://twitter.com/amourow",
+    description: "Twitter",
+    icon: "fa-brands:twitter",
+  },
+  {
+    url: "https://fb.me/amourow",
+    description: "Facebook",
+    icon: "fa-brands:facebook",
+  },
+];
+---
+
+<ContentSection title="Contact" id="contact">
+  <Fragment slot="lead">
+    Let's keep <span class="text-primary">in Touch</span>.
+  </Fragment>
+  <div class="grid grid-cols-3 gap4 w-full sm:w-2/3 border-t-2 border-t-gray-400 pt-8">
+    <div class="col-span-2">
+      <h3 class="text-xl font-extrabold uppercase">Send a message</h3>
+      <p class="text-2xl mt-8">amouro@gmail.com</p>
+    </div>
+    <div>
+      <h3 class="text-xl font-extrabold uppercase">Keep up to Date</h3>
+      
+
+      <ol class="relative text-gray-500 border-l border-gray-200 dark:border-gray-700 dark:text-gray-400 ml-8 mt-12">
+        {
+          links.map((link) => (
+            <li class="mb-16 ml-12 flex items-center">            
+              <a
+              class="absolute flex h-16 w-16 items-center justify-center rounded-full border-current p-4 -left-8 ring-2 bg-default text-blue-400"
+              href={link.url}
+              target="_blank"
+              >
+                <span class="sr-only">{link.description}</span>
+                <Icon class="h-full" name={link.icon} />
+              </a>
+              
+              <h3 class="font-medium leading-tight">{link.description}</h3>
+              
+            </li>
+          ))
+        }
+        
+        
+      </ol>
+
+    </div>
+  </div>
+</ContentSection>

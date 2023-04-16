@@ -1,0 +1,17 @@
+<div id="bubblyfield" class="absolute inset-0">
+  <canvas id="bubbles" class="min-h-screen min-w-screen bg-repeat-y"></canvas>
+</div>
+
+<script>
+  bubbly({
+    canvas: document.querySelector("#bubbles"),
+    bubbles: 50,
+    colorStart: "#3c003c",
+    colorStop: "#1a001a",
+    fillFunc: () => `hsla(${Math.random() * 180}), 100%, 50%, ${Math.random() * 0.25})`,
+    radiusFunc: () => 5 + Math.random() * window.innerWidth / 500,
+    strokeFunc: () => ({color: "rgba(255, 255, 255, 1)", width: Math.random() * 5}),
+    velocityFunc: () =>0.1 + Math.random() * 0.2,
+    angleFunc: () =>Math.random() * Math.PI * 2,
+  });
+</script>
