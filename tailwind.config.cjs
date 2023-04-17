@@ -22,6 +22,9 @@ module.exports = {
       borderColor: {
         default: "var(--color-border)",
       },
+      minWidth: {
+        'screen': '100vw',
+      },
     },
   },
   corePlugins: {

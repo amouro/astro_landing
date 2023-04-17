@@ -3,28 +3,29 @@ import { Icon } from "astro-icon";
 import ContentSection from "~/components/content-section.astro";
 ---
 
-<ContentSection title="Just ship less" id="intro">
-  <Icon slot="eyebrow" name="logomark" class="h-32" />
+<ContentSection title="" id="intro">
+  <span slot="eyebrow" class="inline-flex items-center"><Icon name="cw" class="block h-12 sm:h-18 md:h-20" /> <span class="text-6xl font-extrabold">CW</span></span>
   <Fragment slot="lead">
-    Astro is a new kind of site builder for the
-    <span class="text-primary">modern</span> web.
-    <span class="text-primary">Lightning-fast</span>
-    performance meets <span class="text-primary">powerful</span> developer experience.
+    Chris Wu (he/him/his). <span class="text-primary">Taiwanese 🇹🇼 Drupaller</span>. OSS Contributor. 
+    Enthusiastic to share about <span class="text-primary">Web tech</span>. 
+    Love to <span class="text-primary">travel</span> around the world. 
   </Fragment>
-  <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+  <div class="md:w-2/3 text-center">
+    <p>Passionate about coffee and have recently developed an interest in AI technology. </p>
+    <p>I am working hard every day to improve my Japanese and aim to give a presentation at a conference in Japanese. </p>
+    <p>Love to traval and enjoy learning about different cultures and customs. 
+    Dreaming to start a new life in Europe after retirement. </p>
+    <p>While I take my work seriously, I also value a balanced lifestyle.</p>
+  </div>
+  <div class="grid grid-cols-1 gap-4">
     <a
-      href="https://docs.astro.build/"
-      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
+      
+      class="flex items-center justify-center gap-3 border-2 border-current text-offset px-6 py-4 mt-4"
+      title="Still in dev"
     >
-      <Icon pack="mdi" name="telescope" class="h-8" />
-      <span>Read the docs</span>
+      <Icon pack="mdi" name="book-open-page-variant-outline" class="h-8" />
+      <span>My manual</span>
     </a>
-    <a
-      href="https://astro.new/"
-      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
-    >
-      <Icon pack="mdi" name="rocket" class="h-8" />
-      <span>Try it out</span>
-    </a>
+    
   </div>
 </ContentSection>

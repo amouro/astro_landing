@@ -9,7 +9,7 @@ const widths = [450, 800];
 const sizes = "(min-width: 640px) 42vw, 67vw";
 ---
 
-<section class="relative h-full bg-black">
+<section class="relative h-full bg-black overflow-clip">
   <Bubblyfield />
   <!-- <GitHubCorner /> -->
   <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
@@ -25,12 +25,13 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
       >
         Creator, <br />
         Developer<br />
-        <span class="text-4xl tracking-normal">- Chris Wu -</span>
+        
       </div>
+      <div class="gradient-text text-center font-extrabold tracking-tight text-4xl tracking-normal">- Chris Wu -</div>
     </h2>
     <div
       id="astronaut"
-      class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
+      class="w-2/3 max-w-3xl self-start sm:w-9/12 sm:self-auto sm:justify-self-start"
     >
       <Picture
         class="object-cover w-full h-full rounded-full"
