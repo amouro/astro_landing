@@ -46,7 +46,7 @@ const links: Array<FooterLink> = [
           links.map((link) => (
             <li class="mb-16 ml-12 flex items-center">            
               <a
-              class="absolute flex h-16 w-16 items-center justify-center rounded-full border-current p-4 -left-8 ring-2 bg-default text-blue-400"
+              class="absolute flex h-16 w-16 items-center justify-center rounded-full border-current p-4 -left-8 ring-2 ring-purple-400  bg-default text-purple-500"
               href={link.url}
               target="_blank"
               >
@@ -54,7 +54,7 @@ const links: Array<FooterLink> = [
                 <Icon class="h-full" name={link.icon} />
               </a>
               
-              <h3 class="font-medium leading-tight text-secondary">{link.description}</h3>
+              <h3 class="font-bold leading-tight text-purple-500">{link.description}</h3>
             </li>
           ))
         }
